@@ -45,25 +45,6 @@ const TextReader = ({
         <Text style={[styles.finishedChapterText, {color: reader.textColor}]}>
           Finished: {chapterName}
         </Text>
-        {nextChapter ? (
-          <View style={styles.nextChapButtonContainer}>
-            <Pressable
-              style={styles.nextChapterButton}
-              android_ripple={{color: theme.rippleColor}}
-              onPress={navigateToNextChapter}
-            >
-              <Text
-                style={[styles.nextChapButtonLabel, {color: reader.textColor}]}
-              >
-                Next: {nextChapter.chapterName}
-              </Text>
-            </Pressable>
-          </View>
-        ) : (
-          <Text style={[{color: reader.textColor}, styles.noNextChapterText]}>
-            There's no next chapter
-          </Text>
-        )}
       </View>
     </View>
   );

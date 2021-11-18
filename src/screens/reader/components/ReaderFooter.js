@@ -15,7 +15,6 @@ const ChapterFooter = ({
   nextChapter,
   prevChapter,
   useWebViewForChapter,
-  enableSwipeGestures,
   autoScroll,
   enableWebView,
   enableAutoScroll,
@@ -46,7 +45,7 @@ const ChapterFooter = ({
           paddingBottom: insets.bottom,
         }}
       >
-        <Pressable
+        {/* <Pressable
           android_ripple={rippleConfig}
           style={styles.buttonStyles}
           onPress={navigateToPrevChapter}
@@ -57,19 +56,15 @@ const ChapterFooter = ({
             disabled={!prevChapter}
             color={theme.textColorPrimary}
           />
-        </Pressable>
-        <Pressable
-          android_ripple={rippleConfig}
-          style={styles.buttonStyles}
-          onPress={enableSwipeGestures}
-        >
+        </Pressable> */}
+        {/* <Pressable android_ripple={rippleConfig} style={styles.buttonStyles}>
           <IconButton
             icon="gesture-swipe"
             disabled={!swipeGestures}
             size={26}
             color={theme.textColorPrimary}
           />
-        </Pressable>
+        </Pressable> */}
         {!useWebViewForChapter && (
           <>
             {/* <Pressable
@@ -120,7 +115,7 @@ const ChapterFooter = ({
             color={theme.textColorPrimary}
           />
         </Pressable>
-        <Pressable
+        {/* <Pressable
           android_ripple={rippleConfig}
           style={styles.buttonStyles}
           onPress={navigateToNextChapter}
@@ -131,7 +126,7 @@ const ChapterFooter = ({
             disabled={!nextChapter}
             color={theme.textColorPrimary}
           />
-        </Pressable>
+        </Pressable> */}
       </View>
     </FadeView>
   );

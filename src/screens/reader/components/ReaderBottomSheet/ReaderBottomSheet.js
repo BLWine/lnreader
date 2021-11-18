@@ -31,8 +31,6 @@ const ReaderSheet = ({
   autoScroll,
   useWebViewForChapter,
   showScrollPercentage,
-  swipeGestures,
-  enableSwipeGestures,
   fullScreenMode,
   verticalSeekbar,
 }) => {
@@ -298,12 +296,7 @@ const ReaderSheet = ({
             value={showScrollPercentage}
             theme={theme}
           />
-          <ReaderBottomSheetSwitch
-            label="Swipe gestures"
-            onPress={enableSwipeGestures}
-            value={swipeGestures}
-            theme={theme}
-          />
+
           {!useWebViewForChapter && (
             <ReaderBottomSheetSwitch
               label="Select text"
